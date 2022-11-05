@@ -1,6 +1,8 @@
 /* Start global rules and variables */
 :root {
   --main-color: #3f51b5;
+  --main-light-color: #757de8;
+  --main-dark-color: #002984;
   --text-white-color: #fff;
 }
 
@@ -76,6 +78,69 @@ body {
 }
 /* End header */
 
+/* Start life goal section */
+
+.life-goal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  padding: 30px 10px;
+  /* background-color: #ccc; */
+}
+
+.goals-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.goals {
+  width: 80%;
+  /* animation: moveToTop 2s; */
+}
+
+.goal {
+  background-color: var(--main-light-color);
+  color: var(--text-white-color);
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.goal-title {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.progress {
+  width: 70%;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.progress::before {
+  content: '5%';
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--main-dark-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%;
+  height: 100%;
+}
+
+/* End life goal section */
+
 /* Start animation section */
 
 @keyframes moveToLeft {
@@ -98,6 +163,18 @@ body {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveToTop {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
