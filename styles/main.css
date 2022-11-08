@@ -23,6 +23,7 @@ body {
   color: var(--text-white-color);
   width: 100%;
   background-color: var(--main-color);
+  z-index: 1;
 }
 
 .main-nav .nav-items {
@@ -99,7 +100,7 @@ body {
   /* animation: moveToTop 2s; */
 }
 
-.goal {
+.life-goal .goal {
   background-color: var(--main-light-color);
   color: var(--text-white-color);
   height: 200px;
@@ -111,12 +112,12 @@ body {
   padding-bottom: 30px;
 }
 
-.goal-title {
+.life-goal .goal-title {
   font-size: 3rem;
   font-weight: 400;
 }
 
-.progress {
+.life-goal .progress {
   width: 70%;
   height: 30px;
   background-color: #fff;
@@ -127,19 +128,123 @@ body {
   align-items: center;
 }
 
-.progress::before {
+.life-goal .progress::before {
   content: '5%';
   text-align: center;
   font-weight: bold;
   background-color: var(--main-dark-color);
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 5%;
   height: 100%;
 }
 
 /* End life goal section */
+
+/* Start short-time and long-time goals */
+
+.short-time-goals,
+.long-time-goals {
+  background-color: var(--main-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.goals {
+}
+
+.short-time-goals .goal,
+.long-time-goals .goal {
+  background-color: var(--main-light-color);
+  height: 100px;
+  padding: 20px 30px 100px 20px;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.short-time-goals .goal::before,
+.long-time-goals .goal::before {
+  content: attr(data-index);
+  text-align: center;
+  font-weight: bold;
+  line-height: 40px;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--main-dark-color);
+  opacity: 90%;
+}
+
+.goal-title {
+  font-size: 2rem;
+  direction: rtl;
+}
+
+.percent {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.short-time-goals .progress,
+.long-time-goals .progress {
+  height: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.short-time-goals .progress::before,
+.long-time-goals .progress::before {
+  content: '';
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--main-dark-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--progress-value);
+  height: 100%;
+}
+
+.button {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  background-color: var(--main-dark-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: var(--main-dark-color);
+}
+
+.long-time-goals {
+  margin-top: 100px;
+}
+
+/* End short-time and long-time goals */
 
 /* Start animation section */
 
