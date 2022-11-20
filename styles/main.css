@@ -156,9 +156,6 @@ body {
   padding: 30px 10px;
 }
 
-.goals {
-}
-
 .short-time-goals .goal,
 .long-time-goals .goal {
   background-color: var(--main-light-color);
@@ -187,13 +184,13 @@ body {
 }
 
 .goal-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   direction: rtl;
 }
 
 .percent {
   position: absolute;
-  top: 50px;
+  top: 30px;
   left: 25px;
   font-size: 1.2rem;
   font-weight: bold;
