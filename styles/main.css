@@ -156,6 +156,17 @@ body {
   padding: 30px 10px;
 }
 
+.no-goals {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-light-color);
+  border-radius: 20px;
+  font-size: 1.5rem;
+}
+
 .short-time-goals .goal,
 .long-time-goals .goal {
   background-color: var(--main-light-color);
